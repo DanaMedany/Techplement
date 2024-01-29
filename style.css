@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:root {
+  --color-white: #fff; /* White */
+  --color-primary: #ff7900; /* Tangerine */
+}
+
+body {
+  background-color: #171717 !important;
+  height: 100vh;
+}
+
+/* Header Start */
+header {
+  margin-top: 30px;
+}
+
+header .spark {
+  width: 300px;
+  aspect-ratio: 1;
+  background-color: var(--color-primary);
+  border-radius: 31% 69% 23% 77% / 66%
+              18% 82% 34%;         
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  z-index: -1;
+} 
+
+header .navbar-expand-lg {
+  justify-content: space-between;
+}
+
+header ul {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+header ul li {
+  padding-right: 20px;
+  font-size: 19px;
+  padding: 5px 10px;
+}
+
+header ul li a,
+header .navbar-brand{
+  text-decoration: none;
+  color: var(--color-white);
+  transition: all 0.5s;
+}
+
+header .navbar-brand:hover,
+header ul li a:hover {
+  color : var(--color-primary)
+}
+
+header .menu {
+  cursor: pointer;
+  display: none;
+  font-size: 25px;
+  position: relative;
+  color: var(--color-white);
+}
+
+header.show .list-item {
+  display: block;
+  background-color: #4f4f5a;
+  width: 32%;
+  position: absolute;
+  top: 45px;
+  right:0;
+  z-index: 10;
+  padding: 0;
+}
+
+header .row {
+  margin: 0 30px;
+  justify-content: space-between;
+}
+header .row > div {
+  min-width: 150px;
+}
+
+header .row h1 {
+  font-size: clamp(2rem, 2.5vw, 3.3rem);
+}
+header .row p {
+  font-size: clamp(1.2em,1.6vw, 2.2em);
+}
+
+@media screen and (max-width: 768px) {
+  header .list-item {
+    display: none;
+    overflow: hidden;
+  }
+  header .menu {
+    display: block;
+  }
+}
+/* Header End */
+
+/* About me Start */
+main {
+  margin: 70px 50px ;
+  padding-top: 80px;
+  color: var(--color-white);
+}
+
+main h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+}
+main p {
+  font-size: clamp(1.2em,1.6vw, 2.2em);
+  max-width: 550px;
+}
+
+main img {
+  width: 500px
+}
+
+/* About me End */
+
+
+/* Project Section Start */
+section {
+  margin: 0 50px;
+  color: var(--color-white);
+  padding-bottom: 40px;
+}
+
+section h1 {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+}
+
+section .card{
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+section .card:hover {
+  transform: scale(1.05);
+  border: 3px solid var(--color-primary);
+}
+
+/* Project Section End */
+
+ /* Contact Section Start  */
+
+footer {
+  background-color: #2e2115;
+  color: var(--color-white);
+  padding: 30px 30px 0;
+}
+
+footer .row {
+  max-width: 1200px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+}
+
+footer .row:first-child h3 {
+  padding-bottom: 18px;
+}
+
+footer .row:first-child ul i{
+  font-size: 20px;
+  padding-right: 6px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+footer .row:first-child ul i:hover {
+  transform: scale(1.2);
+}
+
+footer .row > div h6 {
+  text-transform: uppercase;
+}
+
+footer .row > div li {
+  line-height: 1.7;
+  font-size: 16px;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+footer .row > div li:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+}
+
+/* Contact Section End  */
